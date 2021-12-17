@@ -41,6 +41,7 @@ class AddUsersScreen extends StatelessWidget {
               height: 20,
             ),
             TextFormField(
+              keyboardType: TextInputType.name,
               decoration:
                   InputDecoration(hintText: "Name", fillColor: Colors.white),
               onChanged: (val) async {
@@ -51,6 +52,7 @@ class AddUsersScreen extends StatelessWidget {
               height: 20,
             ),
             TextFormField(
+              keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(hintText: "Email"),
               onChanged: (val) async {
                 usersViewModel.addingUser.email = val;
