@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_add_user_project/constants/colors.dart';
 import 'package:mvvm_add_user_project/users_list/view_models/user_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -10,17 +11,25 @@ class AddUsersScreen extends StatelessWidget {
     UsersViewModel usersViewModel = context.watch<UsersViewModel>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add User"),
+        backgroundColor: CustomColors.appBarColor,
+        title: Center(
+            child: Text(
+          "Add User",
+          style: TextStyle(color: CustomColors.primaryTextColor),
+        )),
         actions: [
           IconButton(
             onPressed: () async {
               bool userAdded = await usersViewModel.addUsers();
-              if(!userAdded) {
+              if (!userAdded) {
                 return;
               }
               Navigator.pop(context);
             },
-            icon: Icon(Icons.save),
+            icon: Icon(
+              Icons.save,
+              color: CustomColors.primaryTextColor,
+            ),
           )
         ],
       ),
@@ -32,7 +41,8 @@ class AddUsersScreen extends StatelessWidget {
               height: 20,
             ),
             TextFormField(
-              decoration: InputDecoration(hintText: "Name"),
+              decoration:
+                  InputDecoration(hintText: "Name", fillColor: Colors.white),
               onChanged: (val) async {
                 usersViewModel.addingUser.name = val;
               },

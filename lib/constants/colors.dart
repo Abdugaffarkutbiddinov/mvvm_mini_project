@@ -1,0 +1,9 @@
+import 'dart:ui';
+
+class CustomColors {
+  static Color backgroundColor = const Color(0xff916BBF);
+  static Color boxColor = const  Color(0xff3D2C8D);
+  static Color appBarColor = const Color(0xff1c0c5b);
+  static Color primaryTextColor = const Color(0xffC996CC);
+
+}
