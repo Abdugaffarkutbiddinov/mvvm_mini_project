@@ -25,13 +25,6 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(color: CustomColors.primaryTextColor),
           ),
         ),
-        actions: [
-          IconButton(
-              onPressed: () async {
-                openAddUser(context);
-              },
-              icon: Icon(Icons.add,color: CustomColors.primaryTextColor,)),
-        ],
       ),
       body: Stack(
         children: [
