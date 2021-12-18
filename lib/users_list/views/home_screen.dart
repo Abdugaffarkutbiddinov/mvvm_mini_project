@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_add_user_project/components/add_user_buttom.dart';
 import 'package:mvvm_add_user_project/components/app_loading.dart';
 import 'package:mvvm_add_user_project/components/app_title.dart';
 import 'package:mvvm_add_user_project/components/user_list_row.dart';
@@ -32,13 +33,19 @@ class HomeScreen extends StatelessWidget {
               icon: Icon(Icons.add,color: CustomColors.primaryTextColor,)),
         ],
       ),
-      body: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [_ui(usersViewModel)],
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [_ui(usersViewModel)],
+            ),
           ),
-        ),
+          const Align(
+            alignment: Alignment.bottomRight,
+            child: AddUserButton(),
+          )
+        ],
       ),
     );
   }

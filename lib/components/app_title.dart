@@ -12,7 +12,7 @@ class AppTitle extends StatelessWidget {
       child: Text(
         text!,
         style: TextStyle(
-            fontSize: 20.0, fontWeight: FontWeight.bold, color: CustomColors.boxColor),
+            fontSize: 20.0, fontWeight: FontWeight.bold, color: CustomColors.primaryTextColor),
       ),
     );
   }

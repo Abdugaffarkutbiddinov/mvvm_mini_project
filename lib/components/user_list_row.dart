@@ -15,18 +15,18 @@ class UserListRow extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
-            ),
-          ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Colors.grey.withOpacity(0.5),
+          //     spreadRadius: 5,
+          //     blurRadius: 7,
+          //     offset: Offset(0, 3), // changes position of shadow
+          //   ),
+          // ],
             border: Border.all(
             ),
             borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: Colors.white,
+          color: CustomColors.boxColor,
         ),
         child: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -35,7 +35,7 @@ class UserListRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AppTitle(text: usersListModel.name,),
-              Text(usersListModel.email,style: TextStyle(color: CustomColors.boxColor),),
+              Text(usersListModel.email,style: TextStyle(color: CustomColors.primaryTextColor),),
             ],
           ),
         ),
