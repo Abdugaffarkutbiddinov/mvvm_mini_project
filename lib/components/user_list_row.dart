@@ -20,15 +20,18 @@ class UserListRow extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10)),
           color: CustomColors.boxColor,
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AppTitle(text: usersListModel.name,),
-              Text(usersListModel.email,style: TextStyle(color: CustomColors.primaryTextColor),),
-            ],
+        child: Hero(
+          tag: usersListModel.name,
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AppTitle(text: usersListModel.name,),
+                Text(usersListModel.email,style: TextStyle(color: CustomColors.primaryTextColor),),
+              ],
+            ),
           ),
         ),
       ),

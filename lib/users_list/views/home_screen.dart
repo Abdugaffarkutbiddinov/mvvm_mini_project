@@ -4,6 +4,7 @@ import 'package:mvvm_add_user_project/components/app_loading.dart';
 import 'package:mvvm_add_user_project/components/app_title.dart';
 import 'package:mvvm_add_user_project/components/user_list_row.dart';
 import 'package:mvvm_add_user_project/constants/colors.dart';
+import 'package:mvvm_add_user_project/constants/strings.dart';
 import 'package:mvvm_add_user_project/users_list/models/users_list_model.dart';
 import 'package:mvvm_add_user_project/users_list/utils/navigation_utils.dart';
 import 'package:mvvm_add_user_project/users_list/view_models/user_view_model.dart';
@@ -26,19 +27,19 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [_ui(usersViewModel)],
-            ),
-          ),
-          const Align(
-            alignment: Alignment.bottomRight,
-            child: AddUserButton(),
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [_ui(usersViewModel)],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: AddUserButtom(),
+      bottomNavigationBar: BottomAppBar(
+        color: CustomColors.appBarColor,
+        shape: CircularNotchedRectangle(
+        ),
+        child: SizedBox(height: 40,),
       ),
     );
   }
@@ -64,3 +65,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
