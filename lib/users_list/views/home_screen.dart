@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: AddUserButtom(),
+      floatingActionButton: AddUserButton(),
       bottomNavigationBar: BottomAppBar(
         color: CustomColors.appBarColor,
         shape: CircularNotchedRectangle(

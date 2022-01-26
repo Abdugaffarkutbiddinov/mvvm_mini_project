@@ -3,8 +3,8 @@ import 'package:mvvm_add_user_project/constants/colors.dart';
 import 'package:mvvm_add_user_project/constants/strings.dart';
 import 'package:mvvm_add_user_project/users_list/utils/navigation_utils.dart';
 
-class AddUserButtom extends StatelessWidget {
-  const AddUserButtom({
+class AddUserButton extends StatelessWidget {
+  const AddUserButton({
     Key? key,
   }) : super(key: key);
 
